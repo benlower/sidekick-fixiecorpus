@@ -1,8 +1,5 @@
 import { Tool } from "ai-jsx/batteries/use-tools";
-import {
-  YourSidekickSystemMessage,
-  finalSystemMessageBeforeResponse,
-} from "./system-message.js";
+import { YourSidekickSystemMessage } from "./system-message.js";
 import { FixieCorpus } from "ai-jsx/batteries/docs";
 import { Sidekick } from "ai-jsx/sidekick";
 import { getFixieCorpus, createFixieCorpus, deleteFixieCorpus, listFixieCorpora} from "./fixie-api.js";
@@ -155,10 +152,8 @@ const tools: Record<string, Tool> = {
 export default function SidekickTemplate() {
   return (
     <Sidekick
-      role="A helpful assistant for the Fixie Corpus API."
       systemMessage={systemMessage}
       tools={tools}
-      finalSystemMessageBeforeResponse={finalSystemMessageBeforeResponse}
     />
   );
 }
