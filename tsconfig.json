@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "ai-jsx",
+    "moduleResolution": "Node16",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "declaration": true,
+    "lib": ["es2021", "dom"],
+  }
+}
